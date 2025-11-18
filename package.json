@@ -1,0 +1,41 @@
+{
+  "name": "predictswipe",
+  "version": "1.0.0",
+  "description": "TikTok-style prediction markets for DeFi on BNB Chain",
+  "private": true,
+  "workspaces": [
+    "contracts",
+    "frontend",
+    "backend",
+    "ai-engine"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run install:contracts && npm run install:frontend && npm run install:backend",
+    "install:contracts": "cd contracts && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "dev:contracts": "cd contracts && npm run node",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:ai": "cd ai-engine && python src/main.py",
+    "deploy:testnet": "cd contracts && npm run deploy:testnet",
+    "deploy:mainnet": "cd contracts && npm run deploy:mainnet",
+    "test:contracts": "cd contracts && npm test",
+    "test:frontend": "cd frontend && npm test",
+    "build:frontend": "cd frontend && npm run build",
+    "build:all": "npm run build:frontend && npm run test:contracts"
+  },
+  "keywords": [
+    "prediction-markets",
+    "defi",
+    "bnb-chain",
+    "web3",
+    "hackathon"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "eslint": "^8.57.0"
+  }
+}
